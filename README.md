@@ -17,7 +17,7 @@ Sample User:
 {
   username: "MattyBRaps",
   hash: //password hash,
-  lists: //
+  lists: //references to list documents
 }
 ```
 Sample List with Embedded Items:
@@ -34,19 +34,19 @@ Sample List with Embedded Items:
 
 ##Wireframes
 Home Page and /add - Home page and page where you can add entries
-![home](Home_Add.pdf)
+![home](Documentation/Home_Add.pdf)
 
 /find - Page where you can find entries by name or tags
-![find](Find.pdf)
+![find](Documentation/Find.pdf)
 
 /list - Page where you can view all your entries as a list. Displayed as a table that you can scroll up and down.
-![list](List.pdf)
+![list](Documentation/List.pdf)
 
 /list/entry_name - Page that displays information on a particular entry
-![entry](Entry.pdf)
+![entry](Documentation/Entry.pdf)
 
 ##Sitemap
-![Map](Map.pdf)
+![Map](Documentation/Map.pdf)
 
 ##Use Cases
 1. If you are an unregistered user, you can register a new account on the site.
@@ -60,10 +60,10 @@ Home Page and /add - Home page and page where you can add entries
 *(5 points) User Authentication
   *I will be using Passport.js for user authentication.
   *Passport.js is relatively challenging so I assigned it 5 points.
-  
+
 *(3 points) React.js as the frontend framework
   *React.js is also a pretty challenging framework so I assigned it 3 points.
-  
+
 8 points total out of 8 required points.
 
 ## [Link to Initial Main Project File](app.js)
@@ -71,4 +71,3 @@ Home Page and /add - Home page and page where you can add entries
 ##Annotations
 1. [passport.js authentication docs](http://passportjs.org/docs)
 2. [react.js docs](https://reactjs.org/docs/getting-started.html)
-  
