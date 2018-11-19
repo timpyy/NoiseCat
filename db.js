@@ -17,3 +17,5 @@ const soundInfo = new mongoose.Schema({
 
 
 // TODO: add remainder of setup for slugs, connection, registering models, etc. below
+mongoose.model('Sound', soundInfo);
+mongoose.connect('mongodb://localhost/soundCat', { useNewUrlParser: true });
