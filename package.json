@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/timpyy-final-project/issues"
   },
-  "homepage": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/timpyy-final-project#readme"
+  "homepage": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/timpyy-final-project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "handlebars": "^4.0.12",
+    "hbs": "^4.0.1",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "mongoose": "^5.3.14",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  }
 }

@@ -11,6 +11,21 @@ const staticPath = path.resolve(__dirname, 'public');
 app.use(express.static(staticPath));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
+const passport = require('passport');
+app.use(passport.initialize());
+app.use(passport.session());
+/*
+const http = require('http');
+const https = require('https');
+const fs = require('fs');
+const options = {
+	key: fs.readFileSync(__dirname + '/ssl/server.pem'),
+	cert: fs.readFileSync(__dirname + '/ssl/server.crt'),
+};
+https.createServer(options, app).listen(app.get('port'), function(){
+	console.log('Express started ...');
+});
+*/
 
 app.get('/', (req, res) => {
   res.render('index');

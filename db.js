@@ -37,6 +37,11 @@ const soundInfo = new mongoose.Schema({
   createdAt: {type: String, required: true}
 });
 
+const userSchema = new mongoose.Schema({
+	username: String,
+	password: String,
+});
+
 /*
 const Sound = new mongoose.Schema({
   what: String,
