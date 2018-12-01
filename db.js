@@ -18,8 +18,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
  dbconf = conf.theString;
 } else {
  // if we're not in PRODUCTION mode, then use
- //dbconf = 'mongodb://localhost/hw05';
- dbconf = "mongodb://tp1288:VhqnZFBr@class-mongodb.cims.nyu.edu/tp1288";
+ dbconf = 'mongodb://localhost/hw05';
+ //dbconf = "mongodb://tp1288:VhqnZFBr@class-mongodb.cims.nyu.edu/tp1288";
 }
 
 // users

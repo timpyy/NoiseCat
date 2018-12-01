@@ -1,1 +1,17 @@
 <!-- find page -->
+<h1> Find your sound entry </h1>
+<form method='POST' action='/find'>
+  File Name: <input type='text' name='file_name'>
+  <br>
+  File Location: <input type='text' name='file_location'>
+  <br>
+  Tags: <input type='text' name='tags' placeholder="tags separated by a white space">
+  <br>
+  Description: <input type='text' name='description'>
+  <br>
+  Created At: <input type='text' name='createdAt'>
+  <br>
+  <input type='submit'>
+</form>
+
+<h4> {{response}} </h4>

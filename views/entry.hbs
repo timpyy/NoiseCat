@@ -1,1 +1,21 @@
 <!-- Entry Page -->
+<h1> Found your sound entry! </h1>
+<table>
+  <tr>
+    <th>File Name</th>
+    <th>File Location</th>
+    <th>Tags</th>
+    <th>Description</th>
+    <th>Created On</th>
+  </tr>
+  {{#each sounds}}
+  <tr>
+    <td>{{file_name}}</td>
+    <td>{{file_location}}</td>
+    <td>{{tags}}</td>
+    <td>{{description}}</td>
+    <td>{{createdAt}}</td>
+  </tr>
+  {{/each}}
+
+</table>

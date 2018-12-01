@@ -1,0 +1,37 @@
+<h2>Remove a sound!</h2>
+<form method='POST' action='/remove'>
+  File Name: <input type='text' name='file_name'>
+  <br>
+  File Location: <input type='text' name='file_location'>
+  <br>
+  Tags: <input type='text' name='tags' placeholder="tags separated by a white space">
+  <br>
+  Description: <input type='text' name='description'>
+  <br>
+  Created At: <input type='text' name='createdAt'>
+  <br>
+  <input type='submit'>
+</form>
+<h4>{{message}}</h4>
+{{#if sounds}}
+<table>
+  <tr>
+    <th>File Name</th>
+    <th>File Location</th>
+    <th>Tags</th>
+    <th>Description</th>
+    <th>Created On</th>
+  </tr>
+  {{#each sounds}}
+  <tr>
+    <td>{{file_name}}</td>
+    <td>{{file_location}}</td>
+    <td>{{tags}}</td>
+    <td>{{description}}</td>
+    <td>{{createdAt}}</td>
+  </tr>
+  {{/each}}
+
+</table>
+<br>
+{{/if}}
