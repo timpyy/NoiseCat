@@ -13,10 +13,15 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/', (req, res) => {
+  res.render('index');
+});
+
+app.get('/list', (req, res) => {
   Sound.find({}, function(err, result, count) {
-    res.render('index', {'sounds': result});
+    res.render('list', {'sounds': result});
   })
 });
+
 
 app.get('/add', (req, res) => {
   res.render('add');
@@ -28,8 +33,10 @@ app.post('/add', (req, res) => {
     'file_name' : req.body.file_name,
     'file_location' : req.body.file_location,
     'tags' : tagArr,
-    'description' : req.body.description
+    'description' : req.body.description,
+    'createdAt' : req.body.createdAt
   }).save(function(err, result, count){
+    console.log(result);
     res.redirect('/');
   });
 });

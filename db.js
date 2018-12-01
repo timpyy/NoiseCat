@@ -18,7 +18,8 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
  dbconf = conf.theString;
 } else {
  // if we're not in PRODUCTION mode, then use
- dbconf = 'mongodb://localhost/soundCat';
+ //dbconf = 'mongodb://localhost/hw05';
+ dbconf = "mongodb://tp1288:VhqnZFBr@class-mongodb.cims.nyu.edu/tp1288";
 }
 
 // users
@@ -27,16 +28,27 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 // * they also can have 0 or more sounds
 
 //soundInfo contains information on a sound entry
+
 const soundInfo = new mongoose.Schema({
   file_name: {type: String, required: true},
   file_location: {type: String, required: true},
   tags: {type: Array, required: false},
   description: {type: String, required: false},
-  createdAt: {type: Date, required: true}
+  createdAt: {type: String, required: true}
 });
 
+/*
+const Sound = new mongoose.Schema({
+  what: String,
+  where: String,
+  date: String,
+  hour: Number,
+  desc: String
+});
+*/
+console.log(dbconf);
 
 // TODO: add remainder of setup for slugs, connection, registering models, etc. below
 mongoose.model('Sound', soundInfo);
-mongoose.connect(dbconf, { useNewUrlParser: true });
+mongoose.connect(dbconf, {useNewUrlParser: true});
 //mongoose.connect('mongodb://localhost/soundCat', { useNewUrlParser: true });
