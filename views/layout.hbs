@@ -1,11 +1,19 @@
 <!--main layout-->
-<h1>This is the main layout!</h1>
-<ul>
-  <li> <a href="/"> Home </a></li>
-  <li><a href="/list"> Entry List </a></li>
-  <li><a href="/add"> Add an Entry </a></li>
-  <li><a href="/find"> Find an Entry </a></li>
-  <li><a href="/remove"> Remove an Entry </a></li>
-</ul>
 {{{body}}}
-<h1>Layout Footer</h1>
+{{#if user}}
+<h3>Welcome, {{user}} </h3>
+<ul>
+  <li> <a href='/'> Home </a></li>
+  <li> <a href='/list'> Entry List </a></li>
+  <li> <a href='/add'> Add an Entry </a></li>
+  <li> <a href='/find'> Find an Entry </a></li>
+  <li> <a href='/remove'> Remove an Entry </a></li>
+  <li> <a href='/logout'> Logout </a> </li>
+</ul>
+{{else}}
+<ul>
+  <li> <a href='/'> Home </a></li>
+  <li> <a href='/login'> Login </a></li>
+  <li> <a href='register'> Register </a></li>
+</ul>
+{{/if}}

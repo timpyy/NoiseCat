@@ -1,5 +1,6 @@
 // 1ST DRAFT DATA MODEL
 const mongoose = require('mongoose');
+const passportLocalMongoose = require('passport-local-mongoose');
 
 // is the environment variable, NODE_ENV, set to PRODUCTION?
 let dbconf;
@@ -34,7 +35,8 @@ const soundInfo = new mongoose.Schema({
   file_location: {type: String, required: true},
   tags: {type: Array, required: false},
   description: {type: String, required: false},
-  createdAt: {type: String, required: true}
+  createdAt: {type: String, required: true},
+  username: {type:String, required: true}
 });
 
 const userSchema = new mongoose.Schema({
@@ -42,18 +44,12 @@ const userSchema = new mongoose.Schema({
 	password: String,
 });
 
-/*
-const Sound = new mongoose.Schema({
-  what: String,
-  where: String,
-  date: String,
-  hour: Number,
-  desc: String
-});
-*/
+userSchema.plugin(passportLocalMongoose);
+
 console.log(dbconf);
 
 // TODO: add remainder of setup for slugs, connection, registering models, etc. below
 mongoose.model('Sound', soundInfo);
+mongoose.model('User', userSchema);
 mongoose.connect(dbconf, {useNewUrlParser: true});
 //mongoose.connect('mongodb://localhost/soundCat', { useNewUrlParser: true });
