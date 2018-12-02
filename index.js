@@ -6,10 +6,23 @@ const User = mongoose.model('User');
 const Sound = mongoose.model('Sound');
 const bodyParser = require("body-parser");
 
+class userData {
+  constructor(username, numOfEntries) {
+    this.username = username;
+    this.numOfEntries = numOfEntries;
+  }
+}
+
+class userTags {
+  constructor(username, tagsArr) {
+    this.username = username;
+    this.numOfTags = tagsArr.length;
+  }
+}
 
 router.get('/', function(req, res) {
   if(req.user !== undefined) {
-    res.render('index', { user: req.user.username});
+    res.render('index', { 'user': req.user.username});
   }
   else {
     res.render('index');
@@ -68,7 +81,14 @@ router.post('/register', function(req, res) {
 
 router.get('/list', (req, res) => {
   Sound.find({"username": req.user.username}, function(err, result, count) {
-    res.render('list', {'user': req.user.username, 'sounds': result});
+    let allTags = [];
+    for(let i = 0; i < result.length; i++) {
+      for(let j = 0; j < result[i].tags.length; j++) {
+        allTags.push(result[i].tags[j]);
+      }
+    }
+    let myUserTags = new userTags(req.user.username, allTags);
+    res.render('list', {'user': req.user.username, 'sounds': result, 'tagcount': myUserTags.numOfTags});
   })
 });
 
@@ -221,5 +241,13 @@ router.post('/remove', (req, res) => {
     })
   }
 });
+
+router.get('/userinfo', function(req, res) {
+  Sound.find({"username": req.user.username}, function(err, result, count) {
+    let theUser = new userData(req.user.username, result.length);
+    res.render('userinfo', {'user': theUser.username, 'username': theUser.username, 'entries': theUser.numOfEntries});
+  })
+});
+
 
 module.exports = router;

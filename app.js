@@ -45,5 +45,12 @@ passport.deserializeUser(function(id, done) {
 
 app.use('/', routes);
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
 //app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 app.listen(process.env.PORT || 3000);
