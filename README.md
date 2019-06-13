@@ -61,13 +61,7 @@ Home Page and /add - Home page and page where you can add entries
   *I will be using Passport.js for user authentication.
   *Passport.js is relatively challenging so I assigned it 5 points.
 
-*(3 points) React.js as the frontend framework
-  *React.js is also a pretty challenging framework so I assigned it 3 points.
-
-8 points total out of 8 required points.
-
 ## [Link to Initial Main Project File](app.js)
 
 ##Annotations
 1. [passport.js authentication docs](http://passportjs.org/docs)
-2. [react.js docs](https://reactjs.org/docs/getting-started.html)
