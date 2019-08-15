@@ -1,6 +1,3 @@
-# timpyy-final-project
-final-project created for timpyy
-
 # NoiseCat
 ==================
 
