@@ -31,19 +31,19 @@ Sample List with Embedded Items:
 
 ## Wireframes
 Home Page and /add - Home page and page where you can add entries
-![home](Documentation/Home_Add.pdf)
+![home](Documentation/Home_Add.png)
 
 /find - Page where you can find entries by name or tags
-![find](Documentation/Find.pdf)
+![find](Documentation/Find.png)
 
 /list - Page where you can view all your entries as a list. Displayed as a table that you can scroll up and down.
-![list](Documentation/List.pdf)
+![list](Documentation/List.png)
 
 /list/entry_name - Page that displays information on a particular entry
-![entry](Documentation/Entry.pdf)
+![entry](Documentation/Entry.png)
 
 ## Sitemap
-![Map](Documentation/Map.pdf)
+![Map](Documentation/Map.png)
 
 ## Use Cases
 1. If you are an unregistered user, you can register a new account on the site.
@@ -53,10 +53,8 @@ Home Page and /add - Home page and page where you can add entries
 5. As a user, you can delete entries for sounds that you got rid of.
 
 ## Research Topics
-
-*(5 points) User Authentication
-  *I will be using Passport.js for user authentication.
-  *Passport.js is relatively challenging so I assigned it 5 points.
+MongoDB
+Passport.js
 
 ## [Link to Initial Main Project File](app.js)
 
