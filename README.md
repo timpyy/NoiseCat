@@ -29,19 +29,6 @@ Sample List with Embedded Items:
 }
 ```
 
-## Wireframes
-Home Page and /add - Home page and page where you can add entries
-![home](Documentation/Home_Add.png)
-
-/find - Page where you can find entries by name or tags
-![find](Documentation/Find.png)
-
-/list - Page where you can view all your entries as a list. Displayed as a table that you can scroll up and down.
-![list](Documentation/List.png)
-
-/list/entry_name - Page that displays information on a particular entry
-![entry](Documentation/Entry.png)
-
 ## Sitemap
 ![Map](Documentation/Map.png)
 
