@@ -30,7 +30,7 @@ Sample List with Embedded Items:
 ```
 
 ## Sitemap
-![Map](Documentation/Map.png)
+![Map](/Map.png)
 
 ## Use Cases
 1. If you are an unregistered user, you can register a new account on the site.
