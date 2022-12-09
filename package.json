@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/nyu-csci-ua-0480-001-003-fall-2018/timpyy-final-project#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
     "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "handlebars": "^4.0.12",
